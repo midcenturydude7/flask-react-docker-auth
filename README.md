@@ -1,5 +1,3 @@
-# Test-Driven Development with Python, Flask, and Docker
+# Authentication with Flask, React, and Docker
 
-[![pipeline status](https://gitlab.com/testdriven/flask-tdd-docker/badges/master/pipeline.svg)](https://gitlab.com/testdriven/flask-tdd-docker/commits/master)
-
-https://testdriven.io/courses/tdd-flask/
+OBJECTIVE: The application will add a token-based user authentication to a Flask app, using JSON Web Tokens (JWTs), along with the configuration of a React app to handle client-side authentication.
