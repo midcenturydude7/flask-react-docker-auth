@@ -20,6 +20,8 @@ const users = [
 
 it('renders a username', () => {
     const { getByText } = render(<UsersList users={users}/>);
+    // eslint-disable-next-line testing-library/prefer-screen-queries
     expect(getByText('michael')).toHaveClass('username');
+    // eslint-disable-next-line testing-library/prefer-screen-queries
     expect(getByText('michaelherman')).toHaveClass('username');
 });
