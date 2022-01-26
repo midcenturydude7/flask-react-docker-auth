@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import UsersList from './components/UsersList';
+import AddUser from './components/AddUser';
 
 /* import './index.css';
 import App from './App';
@@ -33,10 +34,12 @@ class App extends Component {
       <section className="section">
         <div className="container">
           <div className="columns">
-            <div className="column is-one-third">
+            <div className="column is-half">
               <br/>
               <h1 className="title is-1">Users</h1>
               <hr/><br/>
+              <AddUser/>
+              <br/><br/>
               <UsersList users={this.state.users}/>
             </div>
           </div>
