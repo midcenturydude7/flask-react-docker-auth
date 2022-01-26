@@ -25,3 +25,8 @@ it('renders a username', () => {
     // eslint-disable-next-line testing-library/prefer-screen-queries
     expect(getByText('michaelherman')).toHaveClass('username');
 });
+
+it('renders', () => {
+    const { asFragment } = render(<UsersList users={users}/>);
+    expect(asFragment()).toMatchSnapshot();
+  });
