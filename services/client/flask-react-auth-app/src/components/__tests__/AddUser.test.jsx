@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/prefer-screen-queries */
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 
@@ -23,4 +24,12 @@ it('renders with default props', () => {
   
     const buttonInput = getByText('Submit');
     expect(buttonInput).toHaveValue('Submit');
+  });
+
+  it('renders', () => {
+    const { asFragment } = render(<AddUser
+      username=''
+      email=''
+    />);
+    expect(asFragment()).toMatchSnapshot();
   });
