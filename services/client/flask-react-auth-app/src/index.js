@@ -17,6 +17,13 @@ class App extends Component {
     this.state = {
       users: []
     };
+
+    this.addUser = this.addUser.bind(this);
+  };
+
+  addUser(event) {
+    event.preventDefault();
+    console.log('sanity check!');
   };
 
   componentDidMount() {
