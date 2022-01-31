@@ -15,13 +15,15 @@ class App extends Component {
     super();
 
     this.state = {
-      users: []
+      users: [],
+      username: '',
+      email: '',
     };
 
     this.addUser = this.addUser.bind(this);
   };
 
-  addUser(event) {
+  addUser = (event) => {
     event.preventDefault();
     console.log('sanity check!');
   };
@@ -45,7 +47,11 @@ class App extends Component {
               <br/>
               <h1 className="title is-1">Users</h1>
               <hr/><br/>
-              <AddUser/>
+              <AddUser
+                username={this.state.username}
+                email={this.state.email}
+                addUser={this.addUser}
+              />
               <br/><br/>
               <UsersList users={this.state.users}/>
             </div>
