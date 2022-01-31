@@ -16,6 +16,7 @@ const AddUser = (props) => {
             placeholder="Enter a username"
             required
             value={props.username}
+            onChange={props.handleChange}
           />
         </div>
         <div className="field">
@@ -31,6 +32,7 @@ const AddUser = (props) => {
             placeholder="Enter an email address"
             required
             value={props.email}
+            onChange={props.handleChange}
           />
         </div>
         <input

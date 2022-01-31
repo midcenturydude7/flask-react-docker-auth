@@ -21,13 +21,22 @@ class App extends Component {
     };
 
     this.addUser = this.addUser.bind(this);
+
+    this.handleChange = this.handleChange.bind(this);
   };
 
-  addUser = (event) => {
+  addUser(event) {
     event.preventDefault();
     console.log('sanity check!');
+    console.log(this.state);
   };
 
+  handleChange(event) {
+    const obj = {};
+    obj[event.target.name] = event.target.value;
+    this.setState(obj);
+  };
+  
   componentDidMount() {
     this.getUsers();
   }; 
@@ -51,6 +60,8 @@ class App extends Component {
                 username={this.state.username}
                 email={this.state.email}
                 addUser={this.addUser}
+                // eslint-disable-next-line react/jsx-handler-names
+                handleChange={this.handleChange}
               />
               <br/><br/>
               <UsersList users={this.state.users}/>
