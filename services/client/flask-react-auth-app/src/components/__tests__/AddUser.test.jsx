@@ -10,6 +10,7 @@ it('renders with default props', () => {
     const { getByLabelText, getByText } = render(<AddUser
       username=''
       email=''
+      handleChange={() => { return true }}
     />);
     
     const usernameInput = getByLabelText('Username');
@@ -30,6 +31,7 @@ it('renders with default props', () => {
     const { asFragment } = render(<AddUser
       username=''
       email=''
+      handleChange={() => { return true }}
     />);
     expect(asFragment()).toMatchSnapshot();
   });

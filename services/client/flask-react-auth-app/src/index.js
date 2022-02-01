@@ -27,13 +27,17 @@ class App extends Component {
 
   addUser(event) {
     event.preventDefault();
+
     const data = {
       username: this.state.username,
       email: this.state.email
     };
 
     axios.post(`${process.env.REACT_APP_API_SERVICE_URL}/users`, data)
-    .then((res) => { console.log(res); })
+    .then((res) => {
+      this.getUsers();
+      this.setState({ username: '', email: '' });
+    })
     .catch((err) => { console.log(err); });
   };
 
