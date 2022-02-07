@@ -32,10 +32,10 @@ services:
   client:
     stdin_open: true
     build:
-      context: ./services/client
+      context: ./services/client/flask-react-auth-app
       dockerfile: Dockerfile
     volumes:
-      - './services/client:/usr/src/app'
+      - './services/client/flask-react-auth-app:/usr/src/app'
       - '/usr/src/app/node_modules'
     ports:
       - 3007:3000
