@@ -8,7 +8,8 @@ const AddUser = (props) => {
           <label
             className="label is-large"
             htmlFor="input-username"
-          >Username</label>
+          >Username
+          </label>
           <input
             name="username"
             id="input-username"
@@ -24,7 +25,8 @@ const AddUser = (props) => {
           <label
             className="label is-large"
             htmlFor="input-email"
-          >Email</label>
+          >Email
+          </label>
           <input
             name="email"
             id="input-email"
